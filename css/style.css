@@ -126,7 +126,7 @@ header.sticky{
 
 .about{
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(300px,auto)); 
     /*  2sütun 1fr, 50%, 50% - 3 sütun, 1fr , %33.33, %33.33, %33.33
     /* 2fr 4fr 4fr gibi bir tanılama sunduysak, bunun bize çıktısı, 
     20%(2birim) 40%(4 birim) 40%(4 birim) */
@@ -189,7 +189,8 @@ header.sticky{
 
 .services-content{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /*grid-template-columns: repeat(3, 1fr);*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     align-items: center;
     text-align: center;
     gap: 1.5rem;
@@ -222,3 +223,66 @@ header.sticky{
 .box:hover h3{
     color: var(--primary-color);
 }
+
+/*
+    --bg-color:#020312;
+    --text-color: #fff;
+    --primary-color: #eb4a4a;
+    --secondary-color: grey;
+    --h1-font: 5rem;
+    --h2-font: 3rem;
+    --h3-font: 2rem;
+    --h4-font: 1.5rem;
+    --h5-font: 1.4rem;
+    --p-font: 1rem;
+    --a-font: 1.2rem;
+    */
+
+    
+
+@media (min-width: 320px) and (max-width: 425px){
+        :root{
+            --h1-font: 4rem;
+            --h2-font: 2.5rem;
+            --h5-font: 1.2rem;
+            --p-font: 0.8rem;
+        }
+}
+    
+@media (min-width: 425px) and (max-width:768px){
+    .navbar a{
+        display: block;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    :root{
+        --h1-font: 4.5rem;
+        --h2-font: 2.8rem;
+        --h5-font: 1.5rem;
+    }
+    section{
+        padding: 100px 15% 90px;
+    }
+    
+}
+
+@media (min-width:768px) and (max-width: 1440px){
+    section{
+        padding: 120px 10% 90px;
+    }
+    :root{
+        --h1-font: 5.2rem;
+        --h2-font: 3.2rem;
+    }
+}
+
+.navbar{
+    display: block;
+}
+
+d-block{
+    display: block;
+}
+
+
+
